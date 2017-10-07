@@ -1,22 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace convertSpeedUnits
+namespace _11ConvertSpeedUnits
 {
     class Program
     {
         static void Main(string[] args)
         {
-            float distanceInmeters = float.Parse(Console.ReadLine());
-            byte hours = byte.Parse(Console.ReadLine());
-            byte minutes = byte.Parse(Console.ReadLine());
-            byte seconds = byte.Parse(Console.ReadLine());
+            int distanceInMeters = int.Parse(Console.ReadLine());
+            int hours = int.Parse(Console.ReadLine());
+            int minutes = int.Parse(Console.ReadLine());
+            int seconds = int.Parse(Console.ReadLine());
 
+            int time = hours * 3600 + minutes * 60 + seconds;
 
-            
+            float minutesInSecond = (float)distanceInMeters / time;
+            float kiloInHour = ((float)distanceInMeters / 1000) / ((float)time / 3600);
+            float milesInHour = ((float)distanceInMeters / 1609) / ((float)time / 3600);
+
+            Console.WriteLine($"{minutesInSecond:0.#######}\n{kiloInHour:0.#######}\n{milesInHour:0.#######}");
         }
     }
 }
