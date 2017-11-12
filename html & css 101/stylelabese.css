@@ -1,0 +1,16 @@
+form{
+    background-color: lightgrey;
+    border-radius: 1px;
+    display: inline-block;
+
+
+
+}
+label{
+    display: inline-block;
+    margin: 10px 3px 3px 8px;
+    float: right;
+}
+input{
+    width: 80px;
+}
